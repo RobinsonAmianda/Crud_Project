@@ -1,0 +1,21 @@
+<h2 style="font-size: 2rem; color: #2a3b8e; text-align: center; margin-bottom: 20px; font-family: Arial, sans-serif;">
+    {% if item %} Update Item {% else %} Create Item {% endif %}
+</h2>
+
+<form method="post" style="max-width: 500px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif;">
+    {% csrf_token %}
+
+    <label for="name" style="display: block; font-size: 1rem; color: #333; margin-bottom: 8px;">
+        Name:
+    </label>
+    <input type="text" name="name" id="name" style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #d1d1d1; border-radius: 5px; margin-bottom: 15px; outline: none; transition: border-color 0.3s;">
+    
+    <label for="description" style="display: block; font-size: 1rem; color: #333; margin-bottom: 8px;">
+        Description:
+    </label>
+    <textarea name="description" id="description" cols="30" rows="10" style="width: 100%; padding: 10px; font-size: 1rem; border: 1px solid #d1d1d1; border-radius: 5px; margin-bottom: 15px; outline: none; transition: border-color 0.3s;"></textarea>
+    
+    <button type="submit" style="width: 100%; padding: 12px; background-color: #2a3b8e; color: #ffffff; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+        Save
+    </button>
+</form>
